@@ -1,0 +1,30 @@
+import java.util.*;
+public class Demo{
+public static void main(String args[]){
+	
+	Scanner scan=new Scanner(System.in);
+	int number=(int)(Math.random()*1000);
+	int s;
+	int i=0;
+	System.out.println("你猜");
+	do{
+	s=scan.nextInt();
+	if(s<=1000&&s>=1){
+	if(number<s){
+	System.out.println("你猜大了");
+	i++;
+	}else if(number>s){
+		System.out.println("你猜小了");
+		i++;
+	}else{
+		i++;
+		break;
+	}}else{
+		System.out.println("你输入的数字不在1-1000之内");
+		System.exit(0);
+	}
+	}while(true);
+	System.out.println("我出的数是"+number);
+	System.out.println("你猜的次数为"+i);
+	}
+}
